@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Manthan Pruthy — Technologist, AI &amp; Data Science</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400;1,6..72,500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Config Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "secondary": "#bfc9c4",
+          "surface-elevation-1": "#14161B",
+          "on-tertiary-fixed-variant": "#5a4222",
+          "outline-variant": "rgba(255, 255, 255, 0.08)",
+          "on-surface-variant": "#9e9fa5",
+          "surface-tint": "#c5a059",
+          "tertiary-fixed-dim": "#e3c197",
+          "text-body-stone": "#9e9fa5",
+          "accent-pale-gold": "#dfbe7a",
+          "on-primary-fixed-variant": "#5d4201",
+          "text-secondary-pearl": "#e4e1d9",
+          "canvas-base": "#0c0d10",
+          "secondary-container": "#24282c",
+          "on-secondary-container": "#d5ded9",
+          "surface-bright": "#22252d",
+          "surface-variant": "#1c1e24",
+          "on-primary-fixed": "#261900",
+          "on-primary": "#14161b",
+          "text-primary-ivory": "#f7f5f0",
+          "on-error": "#690005",
+          "surface-card-warm": "rgba(20, 22, 27, 0.72)",
+          "on-secondary-fixed-variant": "#3f4945",
+          "on-primary-container": "#4e3700",
+          "on-background": "#f7f5f0",
+          "on-secondary": "#1a211e",
+          "surface-container-high": "#1c1e24",
+          "on-surface": "#f7f5f0",
+          "inverse-primary": "#775a19",
+          "outline": "#73757d",
+          "accent-amber-bronze": "#c5a059",
+          "tertiary-fixed": "#ffddb4",
+          "background": "#0c0d10",
+          "primary-fixed": "#ffdea5",
+          "inverse-surface": "#f7f5f0",
+          "surface-card-hover": "rgba(28, 30, 38, 0.88)",
+          "error-container": "#93000a",
+          "error": "#ffb4ab",
+          "surface-container-lowest": "#08090b",
+          "on-tertiary-container": "#4d3718",
+          "secondary-fixed": "#dbe5e0",
+          "on-tertiary-fixed": "#291800",
+          "surface-container": "#131418",
+          "primary-fixed-dim": "#dfbe7a",
+          "text-muted-silver": "#71737c",
+          "primary-container": "#c5a059",
+          "border-hairline-metallic": "rgba(197, 160, 89, 0.22)",
+          "accent-champagne": "#c5a059",
+          "on-tertiary": "#412c0e",
+          "on-error-container": "#ffdad6",
+          "tertiary": "#dfbe7a",
+          "on-secondary-fixed": "#141d1b",
+          "surface": "#0f1014",
+          "inverse-on-surface": "#23262d",
+          "surface-dim": "#0c0d10",
+          "surface-elevation-2": "#181a20",
+          "tertiary-container": "#423214",
+          "secondary-fixed-dim": "#bfc9c4",
+          "surface-container-highest": "#242730",
+          "border-hairline-hover": "rgba(223, 190, 122, 0.45)",
+          "primary": "#dfbe7a",
+          "border-hairline-subtle": "rgba(255, 255, 255, 0.07)",
+          "surface-container-low": "#111216"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "9999px"
+        },
+        "fontFamily": {
+          "headline-lg": ["Newsreader", "serif"],
+          "headline-md": ["Newsreader", "serif"],
+          "headline-sm": ["Newsreader", "serif"],
+          "display-xl": ["Newsreader", "serif"],
+          "display-xl-mobile": ["Newsreader", "serif"],
+          "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+          "body-md": ["Plus Jakarta Sans", "sans-serif"],
+          "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+          "title-md": ["Plus Jakarta Sans", "sans-serif"],
+          "label-md": ["Plus Jakarta Sans", "sans-serif"],
+          "label-sm": ["Plus Jakarta Sans", "sans-serif"]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+  }
+  body {
+    -webkit-tap-highlight-color: transparent;
+  }
+  #ambient-glow {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    background: radial-gradient(circle 750px at 50% 30%, rgba(197, 160, 89, 0.045), transparent 75%);
+  }
+  .editorial-grid-overlay {
+    background-size: 80px 80px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  }
+</style>
+</head>
+<body class="bg-canvas-base text-text-primary-ivory font-body-md selection:bg-accent-amber-bronze selection:text-surface-elevation-1 min-h-screen relative overflow-x-hidden editorial-grid-overlay">
+<!-- Warm Ambient Layer -->
+<div id="ambient-glow"></div>
+
+<!-- Top Navigation Bar -->
+<header class="fixed top-3 left-1/2 -translate-x-1/2 w-[calc(100%-1.5rem)] max-w-7xl rounded-full bg-surface-elevation-1/90 backdrop-blur-xl border border-border-hairline-subtle shadow-[0_16px_40px_rgba(0,0,0,0.5)] flex justify-between items-center px-4 py-2.5 z-50 transition-all duration-300">
+<!-- Monogram & Identity -->
+<a class="flex items-center gap-2.5 group" href="#hero">
+<span class="w-7 h-7 rounded-full bg-surface-elevation-2 border border-border-hairline-metallic flex items-center justify-center text-accent-pale-gold font-headline-sm italic text-xs">MP</span>
+<span class="tracking-wide text-xs sm:text-sm font-medium text-text-primary-ivory group-hover:text-accent-pale-gold transition-colors">Manthan Pruthy</span>
+</a>
+<!-- Navigation Links (Desktop Editorial) -->
+<nav aria-label="Main Navigation" class="hidden lg:flex items-center gap-6">
+<a class="nav-item text-text-body-stone text-xs tracking-wider uppercase font-medium transition-colors duration-200 hover:text-accent-pale-gold" href="#about">About</a>
+<a class="nav-item text-text-body-stone text-xs tracking-wider uppercase font-medium transition-colors duration-200 hover:text-accent-pale-gold" href="#experience">Experience</a>
+<a class="nav-item text-text-body-stone text-xs tracking-wider uppercase font-medium transition-colors duration-200 hover:text-accent-pale-gold" href="#leadership">Leadership</a>
+<a class="nav-item text-text-body-stone text-xs tracking-wider uppercase font-medium transition-colors duration-200 hover:text-accent-pale-gold" href="#skills">Skills</a>
+<a class="nav-item text-text-body-stone text-xs tracking-wider uppercase font-medium transition-colors duration-200 hover:text-accent-pale-gold" href="#learning">Learning</a>
+<a class="nav-item text-text-body-stone text-xs tracking-wider uppercase font-medium transition-colors duration-200 hover:text-accent-pale-gold" href="#beyond">Beyond</a>
+<a class="nav-item text-text-body-stone text-xs tracking-wider uppercase font-medium transition-colors duration-200 hover:text-accent-pale-gold" href="#contact">Contact</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-2">
+<div class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-surface-elevation-2 border border-border-hairline-subtle text-accent-pale-gold font-medium tracking-widest text-[10px]" id="chapter-indicator-badge">
+  CHAPTER I · 01
+</div>
+<a class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-accent-amber-bronze/15 border border-border-hairline-metallic text-accent-pale-gold text-xs font-medium tracking-wide hover:bg-accent-amber-bronze hover:text-surface-elevation-1 transition-all duration-300" href="#contact">
+<span>Get in Touch</span>
+<span class="material-symbols-outlined text-xs">north_east</span>
+</a>
+<button aria-label="Toggle Navigation Drawer" class="p-1 rounded-full bg-surface-elevation-2 border border-border-hairline-subtle text-text-secondary-pearl hover:text-accent-pale-gold transition-colors duration-200" id="mobile-menu-trigger">
+<span class="material-symbols-outlined text-base">menu</span>
+</button>
+</div>
+</header>
+
+<!-- Side Navigation Drawer -->
+<div class="fixed top-0 right-0 h-full w-72 md:w-80 z-50 bg-canvas-base/95 backdrop-blur-2xl border-l border-border-hairline-subtle shadow-2xl flex flex-col justify-between p-6 translate-x-full transition-transform duration-300 ease-in-out" id="side-nav-drawer">
+<div>
+<div class="flex items-center justify-between pb-4 border-b border-border-hairline-subtle">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-elevation-1 border border-border-hairline-metallic flex items-center justify-center text-accent-pale-gold font-headline-sm italic">
+  MP
+</div>
+<div>
+<h3 class="font-headline-sm text-text-primary-ivory text-base tracking-tight">Manthan Pruthy</h3>
+<p class="text-[11px] text-text-muted-silver">AI &amp; Data Science · REVA '26</p>
+</div>
+</div>
+<button class="p-1 text-text-muted-silver hover:text-text-primary-ivory transition-colors" id="close-side-nav">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-1.5 mt-6">
+<a class="drawer-link flex items-center justify-between text-xs tracking-wider uppercase font-medium text-accent-pale-gold bg-surface-elevation-1 px-3 py-2.5 rounded border-l-2 border-accent-amber-bronze" data-chapter="01" href="#about">
+<span>Chapter I · About</span>
+<span class="text-[10px] text-text-muted-silver">01</span>
+</a>
+<a class="drawer-link flex items-center justify-between text-xs tracking-wider uppercase font-medium text-text-body-stone px-3 py-2.5 rounded hover:text-text-primary-ivory hover:bg-surface-elevation-1 transition-all" data-chapter="02" href="#experience">
+<span>Chapter II · Experience</span>
+<span class="text-[10px] text-text-muted-silver">02</span>
+</a>
+<a class="drawer-link flex items-center justify-between text-xs tracking-wider uppercase font-medium text-text-body-stone px-3 py-2.5 rounded hover:text-text-primary-ivory hover:bg-surface-elevation-1 transition-all" data-chapter="03" href="#leadership">
+<span>Chapter III · Leadership</span>
+<span class="text-[10px] text-text-muted-silver">03</span>
+</a>
+<a class="drawer-link flex items-center justify-between text-xs tracking-wider uppercase font-medium text-text-body-stone px-3 py-2.5 rounded hover:text-text-primary-ivory hover:bg-surface-elevation-1 transition-all" data-chapter="04" href="#skills">
+<span>Chapter IV · Skills</span>
+<span class="text-[10px] text-text-muted-silver">04</span>
+</a>
+<a class="drawer-link flex items-center justify-between text-xs tracking-wider uppercase font-medium text-text-body-stone px-3 py-2.5 rounded hover:text-text-primary-ivory hover:bg-surface-elevation-1 transition-all" data-chapter="05" href="#learning">
+<span>Chapter V · Learning</span>
+<span class="text-[10px] text-text-muted-silver">05</span>
+</a>
+<a class="drawer-link flex items-center justify-between text-xs tracking-wider uppercase font-medium text-text-body-stone px-3 py-2.5 rounded hover:text-text-primary-ivory hover:bg-surface-elevation-1 transition-all" data-chapter="06" href="#beyond">
+<span>Chapter VI · Beyond</span>
+<span class="text-[10px] text-text-muted-silver">06</span>
+</a>
+<a class="drawer-link flex items-center justify-between text-xs tracking-wider uppercase font-medium text-text-body-stone px-3 py-2.5 rounded hover:text-text-primary-ivory hover:bg-surface-elevation-1 transition-all" data-chapter="07" href="#contact">
+<span>Chapter VII · Contact</span>
+<span class="text-[10px] text-text-muted-silver">07</span>
+</a>
+</nav>
+<div class="mt-6">
+<a class="w-full inline-flex items-center justify-center gap-2 py-2.5 rounded bg-surface-elevation-1 border border-border-hairline-metallic text-accent-pale-gold text-xs tracking-wider uppercase font-medium hover:bg-accent-amber-bronze hover:text-surface-elevation-1 transition-all duration-300" href="#contact">
+<span class="material-symbols-outlined text-sm">file_download</span>
+<span>Download Dossier</span>
+</a>
+</div>
+</div>
+<div class="pt-4 border-t border-border-hairline-subtle flex items-center justify-between text-text-muted-silver text-xs">
+<span>Status</span>
+<span class="flex items-center gap-2 text-accent-pale-gold text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-amber-bronze"></span>
+  Available for Opportunities
+</span>
+</div>
+</div>
+<div class="fixed inset-0 bg-canvas-base/80 backdrop-blur-sm z-40 hidden" id="drawer-backdrop"></div>
+
+<!-- MAIN CONTENT -->
+<main class="relative z-10 w-full">
+<!-- HERO SECTION -->
+<section class="min-h-screen flex flex-col justify-center items-center px-4 md:px-12 pt-28 pb-16 relative overflow-hidden" id="hero">
+<div class="max-w-4xl mx-auto w-full flex flex-col items-center text-center relative z-10">
+<!-- Status Pill -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface-elevation-1 border border-border-hairline-metallic backdrop-blur-md mb-6">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-amber-bronze"></span>
+<span class="text-[11px] uppercase tracking-widest text-accent-pale-gold font-medium">Available for Opportunities</span>
+</div>
+<!-- High-End Editorial Name -->
+<h1 class="text-4xl sm:text-6xl md:text-7xl font-headline-lg text-text-primary-ivory tracking-tight mb-4 font-normal leading-[1.08]">
+  Manthan Pruthy
+</h1>
+<!-- Executive Subhead -->
+<p class="font-body-md text-sm sm:text-base md:text-lg text-text-secondary-pearl font-normal tracking-wide mb-3 max-w-xl">
+  Artificial Intelligence &amp; Data Science · Technology × Business × People
+</p>
+<!-- Editorial Quote -->
+<p class="max-w-xl text-text-body-stone font-headline-sm italic text-lg sm:text-xl font-light mb-8 leading-relaxed">
+  “Curious about how technology, data, business and people come together.”
+</p>
+<!-- Filter Chips -->
+<div class="flex flex-wrap justify-center items-center gap-2 max-w-2xl mb-10">
+<span class="px-3.5 py-1 rounded-full bg-surface-elevation-1 border border-border-hairline-subtle text-[11px] tracking-wider uppercase font-medium text-text-secondary-pearl">AI &amp; Systems</span>
+<span class="px-3.5 py-1 rounded-full bg-surface-elevation-1 border border-border-hairline-subtle text-[11px] tracking-wider uppercase font-medium text-text-secondary-pearl">Data Science</span>
+<span class="px-3.5 py-1 rounded-full bg-surface-elevation-1 border border-border-hairline-subtle text-[11px] tracking-wider uppercase font-medium text-text-secondary-pearl">Business Strategy</span>
+<span class="px-3.5 py-1 rounded-full bg-surface-elevation-1 border border-border-hairline-subtle text-[11px] tracking-wider uppercase font-medium text-text-secondary-pearl">Leadership</span>
+<span class="px-3.5 py-1 rounded-full bg-surface-elevation-1 border border-border-hairline-subtle text-[11px] tracking-wider uppercase font-medium text-text-secondary-pearl">Product Thinking</span>
+<span class="px-3.5 py-1 rounded-full bg-surface-elevation-1 border border-border-hairline-subtle text-[11px] tracking-wider uppercase font-medium text-text-secondary-pearl">Executive PR</span>
+</div>
+<!-- Action CTAs -->
+<div class="flex flex-row items-center gap-3">
+<a class="px-6 py-2.5 rounded-full bg-accent-amber-bronze text-surface-elevation-1 text-xs tracking-wider uppercase font-semibold hover:bg-accent-pale-gold transition-all duration-300 shadow-md flex items-center gap-1.5" href="#about">
+<span>Explore Journey</span>
+<span class="material-symbols-outlined text-sm">arrow_downward</span>
+</a>
+<a class="px-6 py-2.5 rounded-full bg-surface-elevation-1 border border-border-hairline-subtle text-text-secondary-pearl text-xs tracking-wider uppercase font-medium hover:border-border-hairline-metallic hover:text-accent-pale-gold transition-all duration-300 flex items-center gap-1.5" href="#contact">
+<span>Initiate Contact</span>
+<span class="material-symbols-outlined text-sm">north_east</span>
+</a>
+</div>
+</div>
+</section>
+
+<!-- CHAPTER 01: ABOUT -->
+<section class="py-20 px-4 md:px-12 max-w-6xl mx-auto border-t border-border-hairline-subtle scroll-mt-16" id="about">
+<div class="flex items-center gap-3 mb-6">
+<span class="text-xs uppercase tracking-widest text-accent-pale-gold font-medium">Chapter I · About</span>
+<div class="h-px w-10 bg-accent-amber-bronze/40"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<div class="lg:col-span-7 flex flex-col gap-4">
+<h2 class="text-2xl sm:text-4xl font-headline-lg text-text-primary-ivory font-normal leading-tight">
+  More than one lane.
+</h2>
+<div class="space-y-4 text-text-body-stone text-sm sm:text-base leading-relaxed">
+<p>
+  I'm a second-year Artificial Intelligence &amp; Data Science engineering student at REVA University, curious about how 
+  <strong class="text-text-secondary-pearl font-semibold">Technology</strong>, 
+  <strong class="text-text-secondary-pearl font-semibold">Data</strong>, 
+  <strong class="text-text-secondary-pearl font-semibold">Business</strong> and 
+  <strong class="text-text-secondary-pearl font-semibold">People</strong> come together.
+</p>
+<p>
+  I enjoy exploring new areas, learning through hands-on experiences and taking on roles where I can communicate, organise, collaborate and solve problems.
+</p>
+<p>
+  My experiences have taken me across PR, finance, event management, 
+  <strong class="text-accent-pale-gold font-semibold">Leadership</strong> and AI-focused learning.
+</p>
+</div>
+<div class="pt-4 flex flex-wrap items-center gap-3 border-t border-border-hairline-subtle">
+<div class="flex items-center gap-2 px-3 py-1 rounded bg-surface-elevation-1 border border-border-hairline-subtle text-xs text-text-secondary-pearl">
+<span class="material-symbols-outlined text-sm text-accent-pale-gold">school</span>
+<span>REVA University, Bengaluru</span>
+</div>
+<div class="flex items-center gap-2 px-3 py-1 rounded bg-surface-elevation-1 border border-border-hairline-subtle text-xs text-text-secondary-pearl">
+<span class="material-symbols-outlined text-sm text-accent-pale-gold">calendar_today</span>
+<span>Class of 2026</span>
+</div>
+</div>
+</div>
+<!-- Synergy Matrix -->
+<div class="lg:col-span-5">
+<div class="relative p-6 rounded-xl bg-surface-elevation-1 border border-border-hairline-subtle shadow-xl flex flex-col items-center">
+<div class="w-full flex justify-between items-center mb-4">
+<span class="text-xs uppercase tracking-widest text-text-muted-silver font-medium">Synergy Matrix</span>
+<span class="w-2 h-2 rounded-full bg-accent-amber-bronze"></span>
+</div>
+<div class="relative w-56 h-56 my-2 flex items-center justify-center">
+<div class="absolute inset-0 rounded-full border border-border-hairline-metallic/40"></div>
+<div class="absolute inset-4 rounded-full border border-border-hairline-subtle"></div>
+<div class="w-16 h-16 rounded-full bg-surface-elevation-2 border border-border-hairline-metallic flex flex-col items-center justify-center text-center shadow-md">
+<span class="text-[10px] font-headline-sm italic text-accent-pale-gold">Synthesis</span>
+<span class="text-[8px] uppercase tracking-wider text-text-muted-silver">Core</span>
+</div>
+<!-- Nodes -->
+<button class="node-item absolute top-0 left-1/2 -translate-x-1/2 px-2.5 py-1 rounded bg-surface-elevation-2 border border-border-hairline-subtle hover:border-accent-pale-gold text-center" data-info="Applied ML, AI Infrastructure, Cloud Frameworks &amp; Systems">
+<span class="text-[10px] uppercase tracking-wider text-text-secondary-pearl">Technology</span>
+</button>
+<button class="node-item absolute right-0 top-1/2 -translate-y-1/2 px-2.5 py-1 rounded bg-surface-elevation-2 border border-border-hairline-subtle hover:border-accent-pale-gold text-center" data-info="Quantitative Models, Exploratory Analysis, Structured Pipelines">
+<span class="text-[10px] uppercase tracking-wider text-text-secondary-pearl">Data</span>
+</button>
+<button class="node-item absolute bottom-0 left-1/2 -translate-x-1/2 px-2.5 py-1 rounded bg-surface-elevation-2 border border-border-hairline-subtle hover:border-accent-pale-gold text-center" data-info="Financial Processes, Commercial Margins, Unit Economics">
+<span class="text-[10px] uppercase tracking-wider text-text-secondary-pearl">Business</span>
+</button>
+<button class="node-item absolute left-0 top-1/2 -translate-y-1/2 px-2.5 py-1 rounded bg-surface-elevation-2 border border-border-hairline-subtle hover:border-accent-pale-gold text-center" data-info="Public Relations, High-Trust Teams, Community Stewardship">
+<span class="text-[10px] uppercase tracking-wider text-text-secondary-pearl">People</span>
+</button>
+</div>
+<div class="w-full text-center py-2 px-3 mt-3 rounded bg-surface-elevation-2 border border-border-hairline-subtle text-xs text-text-body-stone min-h-[44px] flex items-center justify-center" id="synergy-status-panel">
+  Tap any node to inspect applied multidisciplinary focus.
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CHAPTER 02: EXPERIENCE -->
+<section class="py-20 px-4 md:px-12 max-w-6xl mx-auto border-t border-border-hairline-subtle scroll-mt-16" id="experience">
+<div class="flex items-center gap-3 mb-6">
+<span class="text-xs uppercase tracking-widest text-accent-pale-gold font-medium">Chapter II · Experience</span>
+<div class="h-px w-10 bg-accent-amber-bronze/40"></div>
+</div>
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 gap-2">
+<div>
+<h2 class="text-2xl sm:text-4xl font-headline-lg text-text-primary-ivory font-normal">
+  Where I've learned by doing.
+</h2>
+<p class="text-text-body-stone text-xs sm:text-sm mt-1 max-w-lg">
+  Hands-on apprenticeships bridging institutional scale with fast-growth enterprise operations.
+</p>
+</div>
+<span class="text-[11px] uppercase tracking-widest text-text-muted-silver">Industry Exposure · 2024–2025</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Paytm Card -->
+<div class="p-6 rounded-xl bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-xs uppercase tracking-widest text-accent-pale-gold font-medium block">PR Intern · 3 Months</span>
+<h3 class="text-xl font-headline-md text-text-primary-ivory">Paytm</h3>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-elevation-2 text-[10px] text-text-muted-silver border border-border-hairline-subtle">
+  Fintech Scale
+</span>
+</div>
+<p class="text-text-body-stone text-xs sm:text-sm leading-relaxed mb-6">
+  Professional exposure to public relations, communication, coordination and working within a large-scale, fast-moving financial technology ecosystem.
+</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-4 border-t border-border-hairline-subtle">
+<span class="px-2 py-0.5 rounded bg-surface-elevation-2 text-[11px] text-text-secondary-pearl">Communication</span>
+<span class="px-2 py-0.5 rounded bg-surface-elevation-2 text-[11px] text-text-secondary-pearl">Professional Collaboration</span>
+<span class="px-2 py-0.5 rounded bg-surface-elevation-2 text-[11px] text-text-secondary-pearl">PR Exposure</span>
+<span class="px-2 py-0.5 rounded bg-surface-elevation-2 text-[11px] text-text-secondary-pearl">Workplace Adaptability</span>
+</div>
+</div>
+<!-- GIVA Card -->
+<div class="p-6 rounded-xl bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-xs uppercase tracking-widest text-accent-pale-gold font-medium block">Finance Intern · 2 Months</span>
+<h3 class="text-xl font-headline-md text-text-primary-ivory">GIVA</h3>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-elevation-2 text-[10px] text-text-muted-silver border border-border-hairline-subtle">
+  D2C Commerce
+</span>
+</div>
+<p class="text-text-body-stone text-xs sm:text-sm leading-relaxed mb-6">
+  Exposure to the finance function within a rapid-growth enterprise. Developed sharp insights into how commercial supply-chains, margins, and business operations connect with financial processes.
+</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-4 border-t border-border-hairline-subtle">
+<span class="px-2 py-0.5 rounded bg-surface-elevation-2 text-[11px] text-text-secondary-pearl">Business Exposure</span>
+<span class="px-2 py-0.5 rounded bg-surface-elevation-2 text-[11px] text-text-secondary-pearl">Financial Understanding</span>
+<span class="px-2 py-0.5 rounded bg-surface-elevation-2 text-[11px] text-text-secondary-pearl">Attention to Detail</span>
+<span class="px-2 py-0.5 rounded bg-surface-elevation-2 text-[11px] text-text-secondary-pearl">Professional Work Experience</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CHAPTER 03: LEADERSHIP & CAMPUS -->
+<section class="py-20 px-4 md:px-12 max-w-6xl mx-auto border-t border-border-hairline-subtle scroll-mt-16 relative" id="leadership">
+<div class="flex items-center gap-3 mb-6">
+<span class="text-xs uppercase tracking-widest text-accent-pale-gold font-medium">Chapter III · Leadership</span>
+<div class="h-px w-10 bg-accent-amber-bronze/40"></div>
+</div>
+<h2 class="text-2xl sm:text-4xl font-headline-lg text-text-primary-ivory font-normal mb-10">
+  I like building things with people.
+</h2>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Indian Data Club -->
+<div class="lg:col-span-7 p-6 rounded-xl bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-3">
+<span class="px-2.5 py-0.5 rounded-full bg-accent-amber-bronze/10 border border-border-hairline-metallic text-[10px] text-accent-pale-gold uppercase tracking-wider font-medium">Current Mandate</span>
+<span class="text-xs text-text-muted-silver">REVA Chapter</span>
+</div>
+<h3 class="text-xl sm:text-2xl font-headline-md text-text-primary-ivory">Indian Data Club</h3>
+<p class="text-xs uppercase tracking-widest text-accent-pale-gold font-medium mb-3">Managing Director · 2nd Year</p>
+<p class="text-text-body-stone text-xs sm:text-sm leading-relaxed mb-6">
+  Contributing to the student community around data, technology and learning while developing deep, hands-on experience in leadership, communication, event execution and cross-team coordination.
+</p>
+</div>
+<div class="grid grid-cols-3 gap-3 p-4 rounded-lg bg-surface-elevation-2 border border-border-hairline-subtle text-center">
+<div>
+<p class="text-xl sm:text-2xl font-headline-sm text-text-primary-ivory">500+</p>
+<p class="text-[9px] uppercase tracking-wider text-text-muted-silver mt-0.5">Community Engaged</p>
+</div>
+<div>
+<p class="text-xl sm:text-2xl font-headline-sm text-accent-pale-gold">12+</p>
+<p class="text-[9px] uppercase tracking-wider text-text-muted-silver mt-0.5">Workshops &amp; Sessions</p>
+</div>
+<div>
+<p class="text-xl sm:text-2xl font-headline-sm text-text-secondary-pearl">100%</p>
+<p class="text-[9px] uppercase tracking-wider text-text-muted-silver mt-0.5">Student Driven</p>
+</div>
+</div>
+</div>
+<!-- OSCODE -->
+<div class="lg:col-span-5 p-6 rounded-xl bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-3">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-elevation-2 border border-border-hairline-subtle text-[10px] text-text-secondary-pearl uppercase tracking-wider font-medium">Technical Alliance</span>
+<span class="text-xs text-text-muted-silver">2025–26</span>
+</div>
+<h3 class="text-xl sm:text-2xl font-headline-md text-text-primary-ivory">OSCODE</h3>
+<p class="text-xs uppercase tracking-widest text-text-muted-silver font-medium mb-3">Event Management Team</p>
+<p class="text-text-body-stone text-xs sm:text-sm leading-relaxed">
+  Driving hackathons, dev workshops, and collaborative coding marathons. Managing on-ground operations, developer relations, and stakeholder alignment.
+</p>
+</div>
+<div class="mt-6 pt-4 border-t border-border-hairline-subtle flex items-center gap-2 text-xs text-text-muted-silver">
+<span class="material-symbols-outlined text-sm text-accent-pale-gold">hub</span>
+<span>Dev Sprints · Student Hackathons · Roundtables</span>
+</div>
+</div>
+<!-- Prior Leadership Track Record -->
+<div class="lg:col-span-12 p-6 rounded-xl bg-surface-elevation-1/70 border border-border-hairline-subtle">
+<h4 class="text-xs uppercase tracking-widest text-text-muted-silver font-medium mb-4">
+  Foundational Leadership Track Record
+</h4>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="p-4 rounded-lg bg-surface-elevation-2 border border-border-hairline-subtle">
+<p class="text-[9px] uppercase tracking-widest text-accent-pale-gold font-medium mb-1">Leadership</p>
+<h5 class="text-sm font-semibold text-text-primary-ivory">House Vice Captain</h5>
+<p class="text-[11px] text-text-muted-silver">Baldwin Boys' High School</p>
+<p class="text-xs text-text-body-stone mt-2">Orchestrated inter-house athletic and cultural contingents, developing core team governance.</p>
+</div>
+<div class="p-4 rounded-lg bg-surface-elevation-2 border border-border-hairline-subtle">
+<p class="text-[9px] uppercase tracking-widest text-accent-pale-gold font-medium mb-1">Academic Forum</p>
+<h5 class="text-sm font-semibold text-text-primary-ivory">Executive Member</h5>
+<p class="text-[11px] text-text-muted-silver">Science Forum · Christ Junior College</p>
+<p class="text-xs text-text-body-stone mt-2">Coordinated scientific colloquiums, guest seminars, and student research presentations.</p>
+</div>
+<div class="p-4 rounded-lg bg-surface-elevation-2 border border-border-hairline-subtle">
+<p class="text-[9px] uppercase tracking-widest text-accent-pale-gold font-medium mb-1">Executive</p>
+<h5 class="text-sm font-semibold text-text-primary-ivory">Core Committee</h5>
+<p class="text-[11px] text-text-muted-silver">Eudaimonia</p>
+<p class="text-xs text-text-body-stone mt-2">Facilitated institutional flagship events, cross-department logistics, and guest delegates.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CHAPTER 04: SKILLS ECOSYSTEM -->
+<section class="py-20 px-4 md:px-12 max-w-6xl mx-auto border-t border-border-hairline-subtle scroll-mt-16" id="skills">
+<div class="flex items-center gap-3 mb-6">
+<span class="text-xs uppercase tracking-widest text-accent-pale-gold font-medium">Chapter IV · Skills</span>
+<div class="h-px w-10 bg-accent-amber-bronze/40"></div>
+</div>
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-8 gap-3">
+<div>
+<h2 class="text-2xl sm:text-4xl font-headline-lg text-text-primary-ivory font-normal">
+  Interactive Skill Ecosystem.
+</h2>
+<p class="text-text-body-stone text-xs sm:text-sm mt-1 max-w-lg">
+  A tripartite taxonomy of people capabilities, professional rigor, and emerging technical interests.
+</p>
+</div>
+<div class="flex items-center gap-1 p-1 rounded-full bg-surface-elevation-1 border border-border-hairline-subtle">
+<button class="skill-filter-btn px-3 py-1 rounded-full text-xs uppercase tracking-wider font-medium bg-accent-amber-bronze text-surface-elevation-1 transition-all" data-filter="ALL">All</button>
+<button class="skill-filter-btn px-3 py-1 rounded-full text-xs uppercase tracking-wider font-medium text-text-muted-silver hover:text-text-primary-ivory transition-all" data-filter="PEOPLE">People</button>
+<button class="skill-filter-btn px-3 py-1 rounded-full text-xs uppercase tracking-wider font-medium text-text-muted-silver hover:text-text-primary-ivory transition-all" data-filter="PROFESSIONAL">Professional</button>
+<button class="skill-filter-btn px-3 py-1 rounded-full text-xs uppercase tracking-wider font-medium text-text-muted-silver hover:text-text-primary-ivory transition-all" data-filter="INTERESTS">Interests</button>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3" id="skills-container">
+<!-- People -->
+<div class="skill-card p-4 rounded-lg bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all cursor-pointer" data-category="PEOPLE" data-desc="Refined verbal clarity, stakeholder briefings, and inter-team communications.">
+<div class="flex justify-between items-center mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-amber-bronze"></span>
+<span class="text-[8px] uppercase tracking-wider text-text-muted-silver">People</span>
+</div>
+<h5 class="text-xs sm:text-sm font-medium text-text-primary-ivory">Communication</h5>
+<p class="text-[11px] text-text-body-stone mt-1 line-clamp-2">Public briefings, executive reports &amp; media relations.</p>
+</div>
+<div class="skill-card p-4 rounded-lg bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all cursor-pointer" data-category="PEOPLE" data-desc="Guiding student cohorts, orchestrating team milestones with accountability.">
+<div class="flex justify-between items-center mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-amber-bronze"></span>
+<span class="text-[8px] uppercase tracking-wider text-text-muted-silver">People</span>
+</div>
+<h5 class="text-xs sm:text-sm font-medium text-text-primary-ivory">Leadership</h5>
+<p class="text-[11px] text-text-body-stone mt-1 line-clamp-2">Managing Director at Indian Data Club &amp; campus initiatives.</p>
+</div>
+<div class="skill-card p-4 rounded-lg bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all cursor-pointer" data-category="PEOPLE" data-desc="Operating fluidly in multidisciplinary student and enterprise environments.">
+<div class="flex justify-between items-center mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-amber-bronze"></span>
+<span class="text-[8px] uppercase tracking-wider text-text-muted-silver">People</span>
+</div>
+<h5 class="text-xs sm:text-sm font-medium text-text-primary-ivory">Teamwork</h5>
+<p class="text-[11px] text-text-body-stone mt-1 line-clamp-2">Collaborative execution with designers, coders &amp; leads.</p>
+</div>
+<div class="skill-card p-4 rounded-lg bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all cursor-pointer" data-category="PEOPLE" data-desc="Bridging consensus across diverse personalities and executive priorities.">
+<div class="flex justify-between items-center mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-amber-bronze"></span>
+<span class="text-[8px] uppercase tracking-wider text-text-muted-silver">People</span>
+</div>
+<h5 class="text-xs sm:text-sm font-medium text-text-primary-ivory">Collaboration</h5>
+<p class="text-[11px] text-text-body-stone mt-1 line-clamp-2">High-trust partnership building and shared ownership.</p>
+</div>
+<div class="skill-card p-4 rounded-lg bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all cursor-pointer" data-category="PEOPLE" data-desc="Large scale campus summits, scheduling, speaker management &amp; audience flow.">
+<div class="flex justify-between items-center mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-amber-bronze"></span>
+<span class="text-[8px] uppercase tracking-wider text-text-muted-silver">People</span>
+</div>
+<h5 class="text-xs sm:text-sm font-medium text-text-primary-ivory">Event Management</h5>
+<p class="text-[11px] text-text-body-stone mt-1 line-clamp-2">End-to-end technical workshop and summit logistics.</p>
+</div>
+
+<!-- Professional -->
+<div class="skill-card p-4 rounded-lg bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all cursor-pointer" data-category="PROFESSIONAL" data-desc="Scoping workstreams, tracking milestones, and delivering against deadlines.">
+<div class="flex justify-between items-center mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-text-secondary-pearl"></span>
+<span class="text-[8px] uppercase tracking-wider text-text-muted-silver">Professional</span>
+</div>
+<h5 class="text-xs sm:text-sm font-medium text-text-primary-ivory">Project Management</h5>
+<p class="text-[11px] text-text-body-stone mt-1 line-clamp-2">Structure, agile iteration, and milestone delivery.</p>
+</div>
+<div class="skill-card p-4 rounded-lg bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all cursor-pointer" data-category="PROFESSIONAL" data-desc="Balancing rigorous engineering academics with corporate internships and leadership roles.">
+<div class="flex justify-between items-center mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-text-secondary-pearl"></span>
+<span class="text-[8px] uppercase tracking-wider text-text-muted-silver">Professional</span>
+</div>
+<h5 class="text-xs sm:text-sm font-medium text-text-primary-ivory">Time Management</h5>
+<p class="text-[11px] text-text-body-stone mt-1 line-clamp-2">Disciplined scheduling across university &amp; work.</p>
+</div>
+<div class="skill-card p-4 rounded-lg bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all cursor-pointer" data-category="PROFESSIONAL" data-desc="Quickly integrating into diverse organizational structures from Paytm fintech to GIVA retail.">
+<div class="flex justify-between items-center mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-text-secondary-pearl"></span>
+<span class="text-[8px] uppercase tracking-wider text-text-muted-silver">Professional</span>
+</div>
+<h5 class="text-xs sm:text-sm font-medium text-text-primary-ivory">Adaptability</h5>
+<p class="text-[11px] text-text-body-stone mt-1 line-clamp-2">Fast acclimation to unfamiliar stacks and org cultures.</p>
+</div>
+<div class="skill-card p-4 rounded-lg bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all cursor-pointer" data-category="PROFESSIONAL" data-desc="Dissecting ambiguous problems using quantitative logic and systematic breakdown.">
+<div class="flex justify-between items-center mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-text-secondary-pearl"></span>
+<span class="text-[8px] uppercase tracking-wider text-text-muted-silver">Professional</span>
+</div>
+<h5 class="text-xs sm:text-sm font-medium text-text-primary-ivory">Critical Thinking</h5>
+<p class="text-[11px] text-text-body-stone mt-1 line-clamp-2">Data-backed decision making under ambiguity.</p>
+</div>
+
+<!-- Interests -->
+<div class="skill-card p-4 rounded-lg bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all cursor-pointer" data-category="INTERESTS" data-desc="Neural architectures, applied foundation models, and AI systems integration.">
+<div class="flex justify-between items-center mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-pale-gold"></span>
+<span class="text-[8px] uppercase tracking-wider text-text-muted-silver">Interests</span>
+</div>
+<h5 class="text-xs sm:text-sm font-medium text-text-primary-ivory">Artificial Intelligence</h5>
+<p class="text-[11px] text-text-body-stone mt-1 line-clamp-2">Neural architectures &amp; generative AI workflows.</p>
+</div>
+<div class="skill-card p-4 rounded-lg bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all cursor-pointer" data-category="INTERESTS" data-desc="Statistical modeling, exploratory data analysis, and predictive workflows.">
+<div class="flex justify-between items-center mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-pale-gold"></span>
+<span class="text-[8px] uppercase tracking-wider text-text-muted-silver">Interests</span>
+</div>
+<h5 class="text-xs sm:text-sm font-medium text-text-primary-ivory">Data Science</h5>
+<p class="text-[11px] text-text-body-stone mt-1 line-clamp-2">Exploratory analytics, statistical pipelines &amp; ETL.</p>
+</div>
+<div class="skill-card p-4 rounded-lg bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all cursor-pointer" data-category="INTERESTS" data-desc="Leveraging modern AI tooling ecosystem for accelerated prototyping and research.">
+<div class="flex justify-between items-center mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-pale-gold"></span>
+<span class="text-[8px] uppercase tracking-wider text-text-muted-silver">Interests</span>
+</div>
+<h5 class="text-xs sm:text-sm font-medium text-text-primary-ivory">AI Tools</h5>
+<p class="text-[11px] text-text-body-stone mt-1 line-clamp-2">Prompt orchestration, agentic setups &amp; tooling.</p>
+</div>
+<div class="skill-card p-4 rounded-lg bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all cursor-pointer" data-category="INTERESTS" data-desc="Market strategy, product positioning, monetization dynamics, and financial analysis.">
+<div class="flex justify-between items-center mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-pale-gold"></span>
+<span class="text-[8px] uppercase tracking-wider text-text-muted-silver">Interests</span>
+</div>
+<h5 class="text-xs sm:text-sm font-medium text-text-primary-ivory">Business</h5>
+<p class="text-[11px] text-text-body-stone mt-1 line-clamp-2">Unit economics, business models &amp; scale strategy.</p>
+</div>
+<div class="skill-card p-4 rounded-lg bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all cursor-pointer" data-category="INTERESTS" data-desc="System design, software stacks, developer frameworks, and digital transformation.">
+<div class="flex justify-between items-center mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-pale-gold"></span>
+<span class="text-[8px] uppercase tracking-wider text-text-muted-silver">Interests</span>
+</div>
+<h5 class="text-xs sm:text-sm font-medium text-text-primary-ivory">Technology</h5>
+<p class="text-[11px] text-text-body-stone mt-1 line-clamp-2">Emerging systems, computational foundations.</p>
+</div>
+<div class="skill-card p-4 rounded-lg bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all cursor-pointer" data-category="INTERESTS" data-desc="Relentless curiosity to unpack emerging fields from aerospace telemetry to quantitative trading.">
+<div class="flex justify-between items-center mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-pale-gold"></span>
+<span class="text-[8px] uppercase tracking-wider text-text-muted-silver">Interests</span>
+</div>
+<h5 class="text-xs sm:text-sm font-medium text-text-primary-ivory">Learning New Domains</h5>
+<p class="text-[11px] text-text-body-stone mt-1 line-clamp-2">Rapid knowledge acquisition across verticals.</p>
+</div>
+</div>
+<!-- Detail Box -->
+<div class="mt-4 p-3 rounded-lg bg-surface-elevation-1 border border-border-hairline-subtle text-xs text-text-secondary-pearl flex items-center gap-2.5">
+<span class="material-symbols-outlined text-accent-pale-gold text-sm">info</span>
+<span id="skill-detail-text">Tap any skill card above to inspect applied context.</span>
+</div>
+</section>
+
+<!-- CHAPTER 05: LEARNING -->
+<section class="py-20 px-4 md:px-12 max-w-6xl mx-auto border-t border-border-hairline-subtle scroll-mt-16" id="learning">
+<div class="flex items-center gap-3 mb-6">
+<span class="text-xs uppercase tracking-widest text-accent-pale-gold font-medium">Chapter V · Learning</span>
+<div class="h-px w-10 bg-accent-amber-bronze/40"></div>
+</div>
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 gap-2">
+<div>
+<h2 class="text-2xl sm:text-4xl font-headline-lg text-text-primary-ivory font-normal">
+  Always learning something new.
+</h2>
+<p class="text-text-body-stone text-xs sm:text-sm mt-1 max-w-lg">
+  Specialized intensive workshops, technical sensor certifications, and civic volunteering engagements.
+</p>
+</div>
+<span class="text-[11px] uppercase tracking-widest text-text-muted-silver">Continuous Synthesis</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-6 rounded-xl bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all flex flex-col justify-between">
+<div>
+<div class="w-9 h-9 rounded bg-surface-elevation-2 border border-border-hairline-subtle flex items-center justify-center text-accent-pale-gold mb-4">
+<span class="material-symbols-outlined text-base">terminal</span>
+</div>
+<span class="text-[11px] uppercase tracking-widest text-accent-pale-gold font-medium block mb-1">Technical Workshop</span>
+<h3 class="text-lg font-headline-sm text-text-primary-ivory mb-2">AI Tools Workshop</h3>
+<p class="text-text-body-stone text-xs sm:text-sm leading-relaxed mb-4">
+  Hands-on generative workflows, prompt architecture &amp; applied model orchestration. Gained practical experience integrating cutting-edge tools for development and research.
+</p>
+</div>
+<div class="pt-4 border-t border-border-hairline-subtle flex items-center justify-between text-xs text-text-muted-silver">
+<span>Applied Intelligence</span>
+<span class="material-symbols-outlined text-sm text-accent-pale-gold">north_east</span>
+</div>
+</div>
+<div class="p-6 rounded-xl bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all flex flex-col justify-between">
+<div>
+<div class="w-9 h-9 rounded bg-surface-elevation-2 border border-border-hairline-subtle flex items-center justify-center text-accent-pale-gold mb-4">
+<span class="material-symbols-outlined text-base">satellite_alt</span>
+</div>
+<span class="text-[11px] uppercase tracking-widest text-accent-pale-gold font-medium block mb-1">Aerospace &amp; Telemetry</span>
+<h3 class="text-lg font-headline-sm text-text-primary-ivory mb-2">CANsat Workshop</h3>
+<p class="text-text-body-stone text-xs sm:text-sm leading-relaxed mb-4">
+  Satellite subsystems, telemetry sensor integration &amp; collaborative telemetry data analysis under simulated launch environment constraints.
+</p>
+</div>
+<div class="pt-4 border-t border-border-hairline-subtle flex items-center justify-between text-xs text-text-muted-silver">
+<span>Sensor Systems</span>
+<span class="material-symbols-outlined text-sm text-accent-pale-gold">north_east</span>
+</div>
+</div>
+<div class="p-6 rounded-xl bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all flex flex-col justify-between">
+<div>
+<div class="w-9 h-9 rounded bg-surface-elevation-2 border border-border-hairline-subtle flex items-center justify-center text-accent-pale-gold mb-4">
+<span class="material-symbols-outlined text-base">volunteer_activism</span>
+</div>
+<span class="text-[11px] uppercase tracking-widest text-accent-pale-gold font-medium block mb-1">Community Engagement</span>
+<h3 class="text-lg font-headline-sm text-text-primary-ivory mb-2">Magnachrista Volunteer</h3>
+<p class="text-text-body-stone text-xs sm:text-sm leading-relaxed mb-4">
+  High-impact community engagement, operational logistics &amp; event coordination facilitating university-level civic drives and social responsibility projects.
+</p>
+</div>
+<div class="pt-4 border-t border-border-hairline-subtle flex items-center justify-between text-xs text-text-muted-silver">
+<span>Social Impact</span>
+<span class="material-symbols-outlined text-sm text-accent-pale-gold">north_east</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CHAPTER 06: BEYOND THE CLASSROOM -->
+<section class="py-20 px-4 md:px-12 max-w-6xl mx-auto border-t border-border-hairline-subtle scroll-mt-16 relative" id="beyond">
+<div class="flex items-center gap-3 mb-6">
+<span class="text-xs uppercase tracking-widest text-accent-pale-gold font-medium">Chapter VI · Beyond the Classroom</span>
+<div class="h-px w-10 bg-accent-amber-bronze/40"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7">
+<h2 class="text-2xl sm:text-4xl font-headline-lg text-text-primary-ivory font-normal mb-4">
+  Compete. Learn. Improve.
+</h2>
+<blockquote class="text-base sm:text-xl font-headline-sm italic text-text-secondary-pearl leading-relaxed mb-6 border-l-2 border-accent-amber-bronze pl-4">
+  “Sports have been an important part of my journey, helping me develop discipline, consistency, competitiveness and teamwork.”
+</blockquote>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-border-hairline-subtle">
+<div class="p-3 rounded bg-surface-elevation-1 border border-border-hairline-subtle text-center">
+<span class="text-xs uppercase tracking-widest text-accent-pale-gold font-medium block">Discipline</span>
+<span class="text-[10px] text-text-muted-silver mt-0.5 block">Daily regimen</span>
+</div>
+<div class="p-3 rounded bg-surface-elevation-1 border border-border-hairline-subtle text-center">
+<span class="text-xs uppercase tracking-widest text-accent-pale-gold font-medium block">Consistency</span>
+<span class="text-[10px] text-text-muted-silver mt-0.5 block">Steady reps</span>
+</div>
+<div class="p-3 rounded bg-surface-elevation-1 border border-border-hairline-subtle text-center">
+<span class="text-xs uppercase tracking-widest text-accent-pale-gold font-medium block">Competition</span>
+<span class="text-[10px] text-text-muted-silver mt-0.5 block">Calibrated drive</span>
+</div>
+<div class="p-3 rounded bg-surface-elevation-1 border border-border-hairline-subtle text-center">
+<span class="text-xs uppercase tracking-widest text-accent-pale-gold font-medium block">Teamwork</span>
+<span class="text-[10px] text-text-muted-silver mt-0.5 block">Relay trust</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col gap-3">
+<div class="p-4 rounded-xl bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-elevation-2 border border-border-hairline-metallic flex items-center justify-center text-accent-pale-gold shrink-0">
+<span class="material-symbols-outlined text-sm">pool</span>
+</div>
+<div>
+<span class="text-[10px] uppercase tracking-widest text-accent-pale-gold font-medium block">State-Level Apex</span>
+<h4 class="text-sm font-semibold text-text-primary-ivory">ICSE Swimming Meet</h4>
+<p class="text-[11px] text-text-muted-silver">2022–23 Season</p>
+<p class="text-xs text-text-body-stone mt-1">Competitive endurance, split-second discipline, and high-pressure performance execution.</p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-elevation-2 border border-border-hairline-metallic flex items-center justify-center text-accent-pale-gold shrink-0">
+<span class="material-symbols-outlined text-sm">waves</span>
+</div>
+<div>
+<span class="text-[10px] uppercase tracking-widest text-accent-pale-gold font-medium block">District Aquatics</span>
+<h4 class="text-sm font-semibold text-text-primary-ivory">District Swimming Competitions</h4>
+<p class="text-[11px] text-text-muted-silver">Christ Junior College</p>
+<p class="text-xs text-text-body-stone mt-1">Podium track, stroke mechanics optimization, and rigorous training cycles.</p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-elevation-1 border border-border-hairline-subtle hover:border-border-hairline-metallic transition-all flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-elevation-2 border border-border-hairline-metallic flex items-center justify-center text-accent-pale-gold shrink-0">
+<span class="material-symbols-outlined text-sm">sports_soccer</span>
+</div>
+<div>
+<span class="text-[10px] uppercase tracking-widest text-accent-pale-gold font-medium block">Team Athletics</span>
+<h4 class="text-sm font-semibold text-text-primary-ivory">District Football Tournament</h4>
+<p class="text-[11px] text-text-muted-silver">Christ Junior College</p>
+<p class="text-xs text-text-body-stone mt-1">Tactical spatial awareness, mid-game communication, and high-intensity on-pitch collaboration.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CHAPTER 07: WHAT'S NEXT & CONTACT -->
+<section class="py-20 px-4 md:px-12 max-w-6xl mx-auto border-t border-border-hairline-subtle scroll-mt-16" id="contact">
+<div class="mb-8">
+<div class="flex items-center gap-3 mb-4">
+<span class="text-xs uppercase tracking-widest text-accent-pale-gold font-medium">Chapter VII · What's Next?</span>
+<div class="h-px w-10 bg-accent-amber-bronze/40"></div>
+</div>
+<div class="max-w-2xl">
+<h2 class="text-2xl sm:text-4xl font-headline-lg text-text-primary-ivory font-normal mb-3">
+  I'm still early in the journey.
+</h2>
+<p class="text-text-body-stone text-xs sm:text-base mb-6">
+  I'm interested in opportunities where I can learn, contribute and experiment across technology and business.
+</p>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-3 py-1 rounded-full bg-surface-elevation-1 border border-border-hairline-subtle text-[11px] tracking-wider uppercase font-medium text-accent-pale-gold">AI &amp; Data Science</span>
+<span class="px-3 py-1 rounded-full bg-surface-elevation-1 border border-border-hairline-subtle text-[11px] tracking-wider uppercase font-medium text-text-secondary-pearl">Technology Systems</span>
+<span class="px-3 py-1 rounded-full bg-surface-elevation-1 border border-border-hairline-subtle text-[11px] tracking-wider uppercase font-medium text-text-secondary-pearl">Business Strategy</span>
+<span class="px-3 py-1 rounded-full bg-surface-elevation-1 border border-border-hairline-subtle text-[11px] tracking-wider uppercase font-medium text-text-secondary-pearl">Product Innovation</span>
+<span class="px-3 py-1 rounded-full bg-surface-elevation-1 border border-border-hairline-subtle text-[11px] tracking-wider uppercase font-medium text-accent-pale-gold">Communication &amp; PR</span>
+<span class="px-3 py-1 rounded-full bg-surface-elevation-1 border border-border-hairline-subtle text-[11px] tracking-wider uppercase font-medium text-text-secondary-pearl">Analytics</span>
+<span class="px-3 py-1 rounded-full bg-surface-elevation-1 border border-border-hairline-subtle text-[11px] tracking-wider uppercase font-medium text-text-secondary-pearl">Student Leadership</span>
+<span class="px-3 py-1 rounded-full bg-surface-elevation-1 border border-border-hairline-subtle text-[11px] tracking-wider uppercase font-medium text-accent-pale-gold">Internships</span>
+</div>
+</div>
+</div>
+
+<!-- Executive Contact Stage -->
+<div class="relative p-6 sm:p-10 rounded-2xl bg-surface-elevation-1 border border-border-hairline-metallic/60 shadow-2xl backdrop-blur-xl overflow-hidden">
+<div class="relative z-10 max-w-3xl">
+<span class="text-xs uppercase tracking-widest text-accent-pale-gold font-medium block mb-2">Initiate Collaboration</span>
+<h3 class="text-2xl sm:text-4xl font-headline-lg tracking-tight text-text-primary-ivory mb-3 leading-tight font-normal">
+  Let's build something interesting.
+</h3>
+<p class="text-text-body-stone text-xs sm:text-base mb-8 max-w-xl">
+  Always open to meaningful conversations, high-impact opportunities, and new ideas.
+</p>
+<div class="flex flex-wrap items-center gap-3 mb-8">
+<a class="px-6 py-2.5 rounded-full bg-accent-amber-bronze text-surface-elevation-1 text-xs tracking-wider uppercase font-semibold hover:bg-accent-pale-gold transition-all shadow-md flex items-center gap-2" href="mailto:pruthym@gmail.com">
+<span>Email Me</span>
+<span class="material-symbols-outlined text-xs">mail</span>
+</a>
+<a class="px-6 py-2.5 rounded-full bg-surface-elevation-2 border border-border-hairline-metallic text-accent-pale-gold text-xs tracking-wider uppercase font-medium hover:bg-accent-amber-bronze hover:text-surface-elevation-1 transition-all flex items-center gap-2" href="https://linkedin.com" target="_blank">
+<span>LinkedIn</span>
+<span class="material-symbols-outlined text-xs">north_east</span>
+</a>
+<a class="px-6 py-2.5 rounded-full bg-transparent border border-border-hairline-subtle text-text-body-stone hover:text-text-primary-ivory text-xs tracking-wider uppercase font-medium transition-all flex items-center gap-2" href="mailto:pruthym@gmail.com?subject=Dossier%20Request">
+<span>Download Dossier</span>
+<span class="material-symbols-outlined text-xs">download</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 border-t border-border-hairline-subtle text-xs text-text-muted-silver">
+<div>
+<p class="text-text-primary-ivory font-medium text-sm mb-0.5">Manthan Pruthy</p>
+<p>AI &amp; Data Science Engineering Student</p>
+<p>REVA University, Bengaluru, India</p>
+</div>
+<div class="flex flex-col sm:items-end justify-center gap-1">
+<a class="hover:text-accent-pale-gold transition-colors text-text-secondary-pearl" href="mailto:pruthym@gmail.com">pruthym@gmail.com</a>
+<a class="hover:text-accent-pale-gold transition-colors text-text-secondary-pearl" href="tel:+917676806233">+91 7676806233</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-canvas-base border-t border-border-hairline-subtle relative z-20">
+<div class="w-full max-w-6xl mx-auto px-4 md:px-12 py-10 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6">
+<div class="flex flex-col gap-1">
+<span class="font-headline-md text-text-primary-ivory text-lg font-normal">Manthan Pruthy</span>
+<p class="text-xs text-text-muted-silver max-w-md">
+  © 2025 Manthan Pruthy. Architected with humanistic typography &amp; refined editorial standards. REVA University.
+</p>
+</div>
+<div class="flex flex-wrap items-center gap-4 text-xs text-text-muted-silver">
+<a class="tracking-widest uppercase hover:text-accent-pale-gold transition-colors" href="https://linkedin.com" target="_blank">LinkedIn</a>
+<a class="tracking-widest uppercase hover:text-accent-pale-gold transition-colors" href="https://github.com" target="_blank">GitHub</a>
+<a class="tracking-widest uppercase hover:text-accent-pale-gold transition-colors" href="mailto:pruthym@gmail.com">Email</a>
+<a class="text-accent-pale-gold tracking-widest uppercase hover:text-text-primary-ivory transition-colors flex items-center gap-1" href="#hero">
+<span class="material-symbols-outlined text-xs">north</span>
+<span>Top</span>
+</a>
+</div>
+</div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Drawer
+    const mobileMenuBtn = document.getElementById('mobile-menu-trigger');
+    const closeSideNavBtn = document.getElementById('close-side-nav');
+    const sideNavDrawer = document.getElementById('side-nav-drawer');
+    const drawerBackdrop = document.getElementById('drawer-backdrop');
+    const drawerLinks = document.querySelectorAll('.drawer-link');
+
+    const openDrawer = () => {
+      sideNavDrawer.classList.remove('translate-x-full');
+      drawerBackdrop.classList.remove('hidden');
+    };
+    const closeDrawer = () => {
+      sideNavDrawer.classList.add('translate-x-full');
+      drawerBackdrop.classList.add('hidden');
+    };
+
+    if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openDrawer);
+    if (closeSideNavBtn) closeSideNavBtn.addEventListener('click', closeDrawer);
+    if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
+    drawerLinks.forEach(link => link.addEventListener('click', closeDrawer));
+
+    // Synergy Matrix
+    const nodes = document.querySelectorAll('.node-item');
+    const synergyStatus = document.getElementById('synergy-status-panel');
+    nodes.forEach((node) => {
+      node.addEventListener('click', () => {
+        const info = node.getAttribute('data-info');
+        if (synergyStatus && info) {
+          synergyStatus.textContent = info;
+          synergyStatus.classList.add('text-accent-pale-gold', 'border-border-hairline-metallic');
+        }
+      });
+    });
+
+    // Skills Filter
+    const filterBtns = document.querySelectorAll('.skill-filter-btn');
+    const skillCards = document.querySelectorAll('.skill-card');
+    const skillDetailText = document.getElementById('skill-detail-text');
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-accent-amber-bronze', 'text-surface-elevation-1');
+          b.classList.add('text-text-muted-silver');
+        });
+        btn.classList.add('bg-accent-amber-bronze', 'text-surface-elevation-1');
+        btn.classList.remove('text-text-muted-silver');
+
+        skillCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'ALL' || category === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    skillCards.forEach(card => {
+      const desc = card.getAttribute('data-desc');
+      card.addEventListener('click', () => {
+        if (skillDetailText && desc) {
+          skillDetailText.textContent = desc;
+        }
+      });
+    });
+
+    // Scroll tracker
+    const sections = document.querySelectorAll('section[id]');
+    const chapterBadge = document.getElementById('chapter-indicator-badge');
+    const chapterTitles = {
+      'hero': 'PROLOGUE',
+      'about': 'CHAPTER I · 01',
+      'experience': 'CHAPTER II · 02',
+      'leadership': 'CHAPTER III · 03',
+      'skills': 'CHAPTER IV · 04',
+      'learning': 'CHAPTER V · 05',
+      'beyond': 'CHAPTER VI · 06',
+      'contact': 'CHAPTER VII · 07'
+    };
+
+    window.addEventListener('scroll', () => {
+      let currentSectionId = 'about';
+      const scrollPosition = window.scrollY + 200;
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          currentSectionId = section.getAttribute('id');
+        }
+      });
+      if (chapterBadge && chapterTitles[currentSectionId]) {
+        chapterBadge.textContent = chapterTitles[currentSectionId];
+      }
+    }, { passive: true });
+  });
+</script>
+</body>
+</html>
